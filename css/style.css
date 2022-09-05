@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
 
 * {
     padding: 0;
@@ -8,19 +8,20 @@
 
 body {
     --background-button: #2da44e;
+    --background-button-hover: #259444;
     --background-dados: #f6f8fa;
     --background: #FFFFFF;
     --color-links: #3191e5;
     --border-inputs: rgb(208, 215, 222);
+    --border-inputs-normal: #3f3f3f;
 
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-
+    font-weight: 400;
 }
 
 a {
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 #principal {
@@ -33,11 +34,13 @@ a {
 }
 
 .container {
-height: 600px;
-width: 345px;
-border: 1px solid red;
-
-margin-top: -90px;
+    height: 600px;
+    width: 380px;
+    /* border: 1px solid red; */
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-panel {
@@ -66,9 +69,8 @@ margin-top: -90px;
     padding-bottom: 15px;
     border-radius: 5px;
     border: 1px solid var(--border-inputs);
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 25px;
+    margin-top: 20px;
+    width: 320px;
 }
 
 .dados {
@@ -79,35 +81,82 @@ margin-top: -90px;
 }
 
 .dados input {
-    line-height: 28px;
-    width: 248px;
+    line-height: 30px;
+    width: 290px;
     border: 1px solid var(--border-inputs);
     border-radius: 6px;
     margin-top: 10px;
 }
 
+.dados input[type="text"]:focus, input[type="password"]:focus {
+    outline: 2px solid var(--color-links); /*Quando selecionado o input, troca a cor da borda*/
+}
+
+
 .dados label {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .label-username {
-    width: 248px;
+    width: 290px;
 }
 
 .login button {
-    width: 248px;
-    height: 32px;
+    width: 290px;
+    height: 33px;
     border-radius: 6px;
     background-color: var(--background-button);
     border: 0;
     color: var(--background);
     font-weight: bold;
     margin-top: 15px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: var(--background-button-hover);
 }
 
 .text-password {
     display: flex;
     justify-content: space-between;
-    width: 248px;
-    margin-top: 15px;
+    width: 290px;
+    margin-top: 14px;
+}
+
+.create-acc {
+    display: flex;
+    justify-content: center;
+    padding: 18px 0;
+    width: 320px;
+    border: 1px solid var(--border-inputs);
+    border-radius: 6px;
+    margin-top: 18px;
+}
+
+.text-acc p {
+    font-size: 13px;
+}
+
+.text-acc a {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 125px;
+    width: 320px;
+}
+
+.text-links a{
+    text-align: center;
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.link-rodape-gray {
+    color: gray;
 }
